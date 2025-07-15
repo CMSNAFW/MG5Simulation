@@ -21,6 +21,8 @@ Launch as
     cd MG5_aMC_v363/mg5amcatnlo
     ./bin/MG5_aMC
     
+Other info at: https://amcatnlo.web.cern.ch/
+
 
 ## Linking the opportune libraries
 
