@@ -33,11 +33,16 @@ Once you launch the code, install the lhadpf, i.e. the parton density functions:
 Then, from command line, you need to add a series of libraries to the path in order to link python with the version of madgraph and lhapdf that you are using:
 
 
-    PATH=$PATH:CURRENTDIRECTORY/mg5amcnlo/HEPTools/lhapdf6_py3/bin:CURRENTDIRECTORY/mg5amcnlo/HEPTools/lhapdf6_py3/include
-    LD_LIBRARY_PATH=CURRENTDIRECTORY/mg5amcnlo/HEPTools/lhapdf6_py3/lib:/home/aya/mg5/MG5_aMC_v2_8_0/HEPTools/lhapdf6_py3/lib64:$LD_LIBRARY_PATH
-    PYTHONPATH=CURRENTDIRECTORY/mg5amcnlo/HEPTools/lhapdf6_py3/lib64/python3.9/site-packages/lhapdf:$PYTHONPATH
+    PWDVAR=`pwd`
+    PATH=$PATH:$PWDVAR/HEPTools/lhapdf6_py3/bin:$PWDVAR/HEPTools/lhapdf6_py3/include
+    LD_LIBRARY_PATH=$PWDVAR/HEPTools/lhapdf6_py3/lib:/home/aya/mg5/MG5_aMC_v2_8_0/HEPTools/lhapdf6_py3/lib64:$LD_LIBRARY_PATH
+    PYTHONPATH=$PWDVAR/HEPTools/lhapdf6_py3/lib64/python3.9/site-packages/lhapdf:$PYTHONPATH
     export PATH
     export LD_LIBRARY_PATH
     export PYTHONPATH
 
+Alternatively, you can download this file that will do exactly the same thing:
+
+    wget https://raw.githubusercontent.com/CMSNAFW/MG5Simulation/refs/heads/main/mgsetup.sh
+    source ./mgsetup.sh
 ##
