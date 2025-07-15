@@ -18,7 +18,7 @@ In other words:
 
 Launch as 
 
-    cd MG5_aMC_v363/mg5amcatnlo
+    cd MG5_aMC_v363/MG5_aMC_v3_6_3
     ./bin/MG5_aMC
     
 Other info at: https://amcatnlo.web.cern.ch/
