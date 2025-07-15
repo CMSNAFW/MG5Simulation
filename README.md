@@ -45,4 +45,23 @@ Alternatively, you can download this file that will do exactly the same thing:
 
     wget https://raw.githubusercontent.com/CMSNAFW/MG5Simulation/refs/heads/main/mgsetup.sh
     source ./mgsetup.sh
-##
+
+## Generate an example of tt events:
+
+use the command:
+
+    ./bin/MG5_aMC
+    
+Then from the command prompt you can generate a process going from two "protons" (i.e. a collection of partons weighted by their pdf) to a couple of top quark antiquark, where an antiparticle is indicated with the tilde afterwads:
+
+    generate p p > t t~
+
+save the output 
+
+    output ttbar_tutorial
+
+and generate the events with the launch command:
+
+    launch ttbar_tutorial
+
+    
