@@ -50,7 +50,7 @@ Alternatively, you can download this file that will do exactly the same thing:
 
 use the command:
 
-    ./bin/MG5_aMC
+    ./bin/mg5_aMC
     
 Then from the command prompt you can generate a process going from two "protons" (i.e. a collection of partons weighted by their pdf) to a couple of top quark antiquark, where an antiparticle is indicated with the tilde afterwads:
 
