@@ -12,6 +12,30 @@ https://launchpad.net/mg5amcnlo
 
 In other words:
 
-  wget https://launchpad.net/mg5amcnlo/3.0/3.6.x/+download/MG5_aMC_v3.6.3.tar.gz 
-  mkdir MG5_aMC_v363
-  tar -xzpvf MG5_aMC_v3.6.3.tar.gz -C MG5_aMC_v363
+    wget https://launchpad.net/mg5amcnlo/3.0/3.6.x/+download/MG5_aMC_v3.6.3.tar.gz 
+    mkdir MG5_aMC_v363
+    tar -xzpvf MG5_aMC_v3.6.3.tar.gz -C MG5_aMC_v363
+
+Launch as 
+
+    cd MG5_aMC_v363/mg5amcatnlo
+    ./bin/MG5_aMC
+    
+
+## Linking the opportune libraries
+
+Once you launch the code, install the lhadpf, i.e. the parton density functions:
+
+   install lhapdf6
+
+Then, from command line, you need to add a series of libraries to the path in order to link python with the version of madgraph and lhapdf that you are using:
+
+
+    PATH=$PATH:CURRENTDIRECTORY/mg5amcnlo/HEPTools/lhapdf6_py3/bin:CURRENTDIRECTORY/mg5amcnlo/HEPTools/lhapdf6_py3/include
+    LD_LIBRARY_PATH=CURRENTDIRECTORY/mg5amcnlo/HEPTools/lhapdf6_py3/lib:/home/aya/mg5/MG5_aMC_v2_8_0/HEPTools/lhapdf6_py3/lib64:$LD_LIBRARY_PATH
+    PYTHONPATH=CURRENTDIRECTORY/mg5amcnlo/HEPTools/lhapdf6_py3/lib64/python3.9/site-packages/lhapdf:$PYTHONPATH
+    export PATH
+    export LD_LIBRARY_PATH
+    export PYTHONPATH
+
+##
